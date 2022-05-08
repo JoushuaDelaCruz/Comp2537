@@ -1,0 +1,275 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    background-color: mintcream;
+}
+#main-body {
+    display: grid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 50px;
+}
+
+header{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+}
+
+#pokemon-bar{
+    text-align: center;
+}
+
+#search {
+    margin-top: 10px;
+    background-color: lightsalmon;
+    padding: 5px 30px;
+    font-size: 25px;
+    border: 1px solid red;
+    border-radius: 10px;
+    color: darkblue;
+}
+
+h1{
+    font-size: 50px;
+    color: coral;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.pokemon-card{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: repeat(auto, 4);
+    grid-template-areas: 
+    "header-id . . ."
+    ". content-img content-img ."
+    ". content-name content-name ."
+    ". footer-type footer-type .";
+    background-color: bisque;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 50px;
+    margin: 100px 0px 50px 0px;
+}
+
+.pokemon-id{
+    grid-area: header-id;
+    padding: 20px;
+    margin-bottom: 50px;
+    color: lightslategray;
+}
+
+.pokemon-img{
+    grid-area: content-img;
+}
+
+.pokemon-name{
+    grid-area: content-name;
+    margin: 20px 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.pokemon-type-container{
+    grid-area: footer-type;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pokemon-info{
+    width: 70%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    margin-top: 100px;
+    background-color: aliceblue;
+    margin-left: 0px;
+    padding: 50px;
+    height: 100%;
+    margin: 50px 0px 0px 0px;
+    border: 1px solid green;
+    border-radius: 90px;
+    align-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+}
+
+h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.container{
+    background-color: lavender;
+    border: 1px solid salmon;
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+}
+
+#measurement-body{
+    display: flex;
+    gap: 50px;
+}
+
+.measurement-container{
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#ability-container{
+    display: inline;
+    margin-left: 20px;
+}
+
+li {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.header{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.type-container{
+    padding: 3px 10px;
+    margin: 4px;
+    font-size: 20px;
+}
+
+.normal{
+    background-color: rosybrown;
+    border: 3px solid darkolivegreen;
+    border-radius: 10px;
+}
+
+.fighting{
+    background-color: chocolate;
+    border: 3px solid indigo;
+    border-radius: 10px;
+}
+
+.flying{
+    background-color: lavender;
+    border: 3px solid darkolivegreen;
+    border-radius: 10px;
+}
+
+.poison{
+    background-color: mediumpurple;
+    border: 3px solid darkslategray;
+    border-radius: 10px;
+}
+
+.ground{
+    background-color: peru;
+    border: 3px solid darkolivegreen;
+    border-radius: 10px;
+}
+
+.rock{
+    background-color: sienna;
+    border: 3px solid darkmagenta;
+    border-radius: 10px;
+}
+
+.bug{
+    background-color: forestgreen;
+    border: 3px solid darkslateblue;
+    border-radius: 10px;
+}
+
+.ghost{
+    background-color: mediumslateblue;
+    border: 3px solid darkslategray;
+    border-radius: 10px;
+}
+
+.steel{
+    background-color: olivedrab;
+    border: 3px solid darkslateblue;
+    border-radius: 10px;
+}
+
+.fire{
+    background-color: crimson;
+    border: 3px solid rgb(255,140,0);
+    border-radius: 10px;
+}
+
+.water{
+    background-color: dodgerblue;
+    border: 3px solid darkolivegreen;
+    border-radius: 10px;
+}
+
+.grass{
+    background-color: limegreen;
+    border: 3px solid saddlebrown;
+    border-radius: 10px;
+}
+
+.electric{
+    background-color: yellow;
+    border: 3px solid saddlebrown;
+    border-radius: 10px;
+}
+
+.psychic{
+    background-color: magenta;
+    border: 3px solid darkblue;
+    border-radius: 10px;
+}
+
+.ice{
+    background-color: cornflowerblue;
+    border: 3px solid darkgreen;
+    border-radius: 10px;
+}
+
+.dragon{
+    background-color: lightseagreen;
+    border: 3px solid darkblue;
+    border-radius: 10px;
+}
+
+.dark{
+    background-color: slategray;
+    border: 3px solid darkslategray;
+    border-radius: 10px;
+}
+
+.fairy{
+    background-color: lightcoral;
+    border: 3px solid darkblue;
+    border-radius: 10px;
+}
+
+/* #show-images {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+} */

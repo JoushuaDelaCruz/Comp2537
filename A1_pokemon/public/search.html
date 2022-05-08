@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Pokemon</title>
+
+    <!-- Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./search.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1> Search for Pokemons </h1>
+            <div id="type-engines">
+                <span class="input-container">
+                    <label for="type" class="labels">Type: </label>
+                    <select name="type" id="type">
+                        <option class="type-input" value="all">All Types</option>
+                        <option class="type-input" value="normal">Normal</option>
+                        <option class="type-input" value="fighting">Fighting</option>
+                        <option class="type-input" value="flying">Flying</option>
+                        <option class="type-input" value="poison">Poison</option>
+                        <option class="type-input" value="ground">Ground</option>
+                        <option class="type-input" value="rock">Rock</option>
+                        <option class="type-input" value="bug">Bug</option>
+                        <option class="type-input" value="ghost">Ghost</option>
+                        <option class="type-input" value="steel">Steel</option>
+                        <option class="type-input" value="fire">Fire</option>
+                        <option class="type-input" value="water">Water</option>
+                        <option class="type-input" value="grass">Grass</option>
+                        <option class="type-input" value="electric">Electric</option>
+                        <option class="type-input" value="psychic">Psychic</option>
+                        <option class="type-input" value="ice">Ice</option>
+                        <option class="type-input" value="dragon">Dragon</option>
+                        <option class="type-input" value="dark">Dark</option>
+                        <option class="type-input" value="fairy">Fairy</option>
+                    </select>
+                </span>
+                <div class="input-container">
+                    <input type="text" id="pokemon-search" name="search" placeholder="Find your Pokemon">
+                </div>
+                <span class="input-container">
+                    <label for="region" class="labels">Region: </label>
+                    <select name="region" id="region">
+                        <option class="type-input" value="kanto">Kanto (1 - 151)</option>
+                        <option class="type-input" value="johnto">Johnto (152 - 251)</option>
+                        <option class="type-input" value="hoenn">Hoenn (252 - 386)</option>
+                        <option class="type-input" value="sinnoh">Sinnoh (387 - 494)</option>
+                        <option class="type-input" value="unova">Unova (495 - 649)</option>
+                        <option class="type-input" value="kalos">Kalos (650 - 721)</option>
+                        <option class="type-input" value="alola">Alola (722 - 809)</option>
+                        <option class="type-input" value="galar">Galar (810 - 898)</option>
+                    </select>
+                </span>
+            </div>
+        </header>
+        <div id="pokemon-body">
+        </div>
+        <footer>
+
+        </footer>
+    </main>
+
+    <!---------------------------------------------->
+    <!--   Your own JavaScript functions go here  -->
+    <!---------------------------------------------->
+    <script src="search.js"></script>
+</body>
+
+</html>
