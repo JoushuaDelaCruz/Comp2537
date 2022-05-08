@@ -19,6 +19,7 @@ header{
     align-items: center;
     align-content: center;
     gap: 30px;
+    margin-bottom: 5%;
 }
 
 #pokemon-bar{
@@ -47,6 +48,7 @@ main {
     justify-content: space-around;
     align-items: center;
     align-content: space-around;
+    row-gap: 100px;
 }
 
 a{
@@ -68,7 +70,6 @@ a{
     width: 100%;
     border: 1px solid gray;
     border-radius: 50px;
-    margin: 100px 0px 50px 0px;
 }
 
 .pokemon-id{
