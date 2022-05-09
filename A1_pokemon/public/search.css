@@ -76,28 +76,30 @@ input[type="text"] {
 #pokemon-body{
     grid-area: content;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 25% 25% 25%;
     grid-auto-rows: auto;
     grid-template-areas: ".";
     justify-content: space-around;
     align-items: center;
     align-content: space-between;
+    row-gap: 50px;
+    
 }
 
 .pokemon-card{
     display: grid;
-    grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: repeat(auto, 4);
     grid-template-areas: 
-    "header-id . . ."
-    ". content-img content-img ."
-    ". content-name content-name ."
-    ". footer-type footer-type .";
+    "header-id"
+    "content-img"
+    "content-name"
+    "footer-type";
     background-color: bisque;
-    padding: 0px 50px;
     border: 1px solid gray;
     border-radius: 50px;
-    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .pokemon-id{

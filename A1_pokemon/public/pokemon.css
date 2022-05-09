@@ -5,41 +5,56 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-main{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5%;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    align-content: space-between;
-    
+body{
+    background: linear-gradient(to top, rgb(255,255,255), rgb(255,228,225))
 }
 
-#pokemon-card{
+main{
     display: grid;
+    grid-template-rows: 200px 700px 300px;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-areas: 
+    ". . ."
+    ". body ."
+    ". . .";
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+#main-body{
+    grid-area: body;
+    display: flex;
     height: 100%;
-    grid-template-columns: 10% 40% 40% 10%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    column-gap: 15px;
+}
+
+
+#pokemon-card{
+    grid-area: card;
+    display: grid;
     grid-template-rows: repeat(auto, 4);
     grid-template-areas: 
-    "header-id . . ."
-    ". content-img content-img ."
-    ". content-name content-name ."
-    ". footer-type footer-type .";
+    "header-id"
+    "content-img"
+    "content-name"
+    "footer-type";
     background-color: bisque;
-    width: 20%;
     border: 1px solid gray;
     border-radius: 50px;
-    margin: 100px 0px 100px 100px;
-    padding: px 0px;
-    align-content: space-around;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    align-content: center;
+    width: 25%;
+    height: 90%;
+    padding: 0px;
 }
 
 #pokemon-id{
     grid-area: header-id;
-    padding: 20px;
     margin-bottom: 50px;
     color: lightslategray;
 }
@@ -62,20 +77,29 @@ main{
 }
 
 #pokemon-info{
+    grid-area: stats;
     width: 70%;
     display: grid;
     grid-template-rows: auto auto auto;
-    margin-top: 100px;
     background-color: aliceblue;
-    margin-left: 0px;
     padding: 50px;
     height: 100%;
-    margin: 50px 0px 0px 0px;
     border: 1px solid green;
     border-radius: 90px;
     align-content: space-between;
     align-items: center;
-    row-gap: 20px;
+    justify-content: baseline;
+    gap: 10px;
+}
+
+#stats-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.content{
+    text-align: center;
 }
 
 h2{

@@ -3,10 +3,12 @@ const { render } = require('express/lib/response');
 const res = require('express/lib/response');
 const app = express()
 const https = require("https")
+const cors = require('cors');
+app.use(cors());
 
 app.set('view engine', 'ejs')
 
-app.listen(4000, (err) => {
+app.listen(process.env.PORT || 4000, (err) => {
     if (err) console.log(err);
 })
 

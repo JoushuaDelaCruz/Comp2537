@@ -58,18 +58,18 @@ a{
 
 .pokemon-card{
     display: grid;
-    height: 100%;
-    grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: repeat(auto, 4);
     grid-template-areas: 
-    "header-id . . ."
-    ". content-img content-img ."
-    ". content-name content-name ."
-    ". footer-type footer-type .";
+    "header-id"
+    "content-img"
+    "content-name"
+    "footer-type";
     background-color: bisque;
-    width: 100%;
     border: 1px solid gray;
     border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .pokemon-id{
