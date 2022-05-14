@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Pokemon</title>
+
+    <!-- Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="timeline.css">
+</head>
+
+<body>
+    <header>
+        <h1> Events Timeline </h1>
+    </header>
+    <template id="cardTemplate">
+        <div class="timeline-container">
+            <span class="data-container">
+                <h2 class="label"> Event Text: </h2>
+                <p class="event-info"> Event information </p>
+            </span>
+            <span class="data-container">
+                <h2 class="label"> Event Time: </h2>
+                <p class="event-time"> Event Time </p>
+            </span>
+            <span class="data-container">
+                <h2 class="label"> Event Repeatition: </h2>
+                <p class="event-repeatition"> Event Repeatition </p>
+            </span>
+            <span> <button class="btn liked-btn" type="button" onclick="eventLiked(event)"> Like </button> <button
+                    class="btn delete-btn" type="button" onclick="eventRemoved(event)"> Delete </button> </span>
+        </div>
+    </template>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+    <!---------------------------------------------->
+    <!--   Your own JavaScript functions go here  -->
+    <!---------------------------------------------->
+    <script src="timeline.js"></script>
+</body>
+
+</html>

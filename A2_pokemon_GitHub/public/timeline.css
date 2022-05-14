@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid silver;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.timeline-container{
+    border-bottom: 2px solid saddlebrown;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.label{
+    font-size: medium;
+    display: inline-block;
+}
+
+p {
+    padding: 15px 0px;
+    display: inline-block;
+}
+
+.btn{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    background-color: bisque;
+}
+
+.delete-btn:hover{
+    background-color: red;
+    color: white;
+}
+
+.liked-btn:hover{
+    background-color: blue;
+    color: white;
+}
+
+@media screen and (max-width: 550px) {
+    h2, p{
+        display: block;
+    }
+}
