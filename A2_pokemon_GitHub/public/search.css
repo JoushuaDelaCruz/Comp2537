@@ -44,6 +44,14 @@ label{
     font-size: 25px
 }
 
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: 	rgb(176,224,230);
+    border: none;
+    cursor: pointer;
+}
 
 #type-engines{
     display: flex;

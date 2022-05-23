@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./profile.css">
+    <!-- <link rel="stylesheet" href="search.css"> -->
+</head>
+
+<body>
+
+    <header>
+        <h1>Login-In Timeline</h1>
+        <div class="timeline-container">
+            <div class="login-card">
+                <h2 class="login-time most-recent-login"> You logged-in at: </h2>
+            </div>
+            <div class="login-card">
+                <h2 class="login-time last-login"> Last you logged in: </h2>
+            </div>
+        </div>
+    </header>
+    <hr>
+
+    <template id="previous-cart-template">
+        <a class="previous-cart-link">
+            <div class="previous-purchase">
+                <span class="purchase-number"> Purchase Number:  </span>
+                <span class="total-purchased"> Total Amount </span>
+            </div>
+        </a>
+    </template>
+
+    <main>
+        <nav>
+            <h1 class="greetings"></h1> <a href="http://localhost:5000/search"> Pokemon Shop </a>
+        </nav>
+        <div class="cart-body">
+            <div class="cart-container current-cart">
+                <h3>Current Cart</h3>
+                <div class="container" id="current">
+                    <span class="labels">
+                        <h4>Products</h4>
+                        <h4>Price</h4>
+                    </span>
+                    <div class="added-items">
+                        
+                    </div>
+                    <div class="miscellanous">
+                        <span class="subtotal-container">
+                            <h5>Subtotal</h5> <h5 class="subtotal"></h5>
+                        </span>
+                        <span class="gst-container">
+                            <h5>Estimated GST (5%)</h5> <h5 class="gst"></h5>
+                        </span>
+                        <span class="pst-container">
+                            <h5>Estimated PST (7%)</h5> <h5 class="pst"></h5>
+                        </span>
+                    </div>
+                    <div class="total-container">
+                        <span class="total-container">
+                            <h5>Total:</h5> <h5 class="total"></h5>
+                        </span>
+                    </div>
+                </div>
+                <input type="button" class="purchase-btn" value="Purchase">
+            </div>
+            <div class="cart-container history-cart">
+                <h3>Previous Carts</h3>
+                <div class="container" id="history">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <script src="profile.js"></script>
+</body>
+
+</html>

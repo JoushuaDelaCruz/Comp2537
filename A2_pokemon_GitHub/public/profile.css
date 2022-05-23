@@ -1,0 +1,155 @@
+body{
+    box-sizing: border-box;
+    width: min(100% - 1rem, 90%);
+    margin-inline: auto;
+}
+
+/* ---------------- */
+/* - TimeLine CSS - */
+/* ---------------- */
+
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: min(100% - 2rem, 600px);
+    margin-inline: auto;
+    margin-bottom: 1%;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid crimson;
+}
+
+.timeline-container{
+    padding-block: 5%;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    row-gap: 15px;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.login-card{
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    background-color: azure;
+    text-align: center;
+}
+
+/* ------------------ */
+/* - navigation CSS - */
+/* ------------------ */
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    padding: 10px;
+    background-color: blanchedalmond;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+/* ----------------- */
+/* - Cart Body CSS - */
+/* ----------------- */
+.cart-body{
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    align-items: stretch;
+    background-color: 	rgb(211,211,211);
+    border-radius: 10px;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+.cart-body h3{
+    color: black;
+    text-align: center;
+}
+
+.cart-container{
+    height: fit-content;
+    display: grid;
+    grid-template-rows: auto 95fr;
+}
+
+.container{
+    height: 450px;
+    width: 100%;
+    background-color: rgb(255,222,173);
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: auto;
+}
+
+h5, h4 {
+    display: inline-block;
+    padding: 10px;
+    margin: 1px;
+}
+
+.labels, .added-items, .miscellanous{
+    border-bottom: 1px solid gray;
+}
+
+.container span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: brown;
+    border: none;
+    color: white;
+}
+
+/* -------------------- */
+/* - Cart History CSS - */
+/* -------------------- */
+
+.previous-purchase{
+    height: 50px;
+    background-color: rgb(245,245,220);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    margin: 10px 5px;
+    padding-inline: 10px;
+    border-radius: 5px;
+}
+
+.previous-cart-link{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 550px) {
+    .cart-body{
+        grid-template-columns: 100fr;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

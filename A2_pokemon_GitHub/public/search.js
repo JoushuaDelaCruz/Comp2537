@@ -3,6 +3,8 @@ pokemonRegion = [0, 50]
 var today = new Date();
 var date = (today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear();
 var time = today.getHours() + ":" + today.getMinutes()
+var UserId = JSON.parse(sessionStorage.getItem("user"))._id
+console.log(UserId)
 
 function addLeadingZeroes(num, totalLength = 3) {
     if (num < 0) {
@@ -102,17 +104,31 @@ async function display_pokemon(pokemon, search = false) {
 
 
     if (pokemonType === "all" || pokemonInType || search) {
-        newcard = `<a class="pokemon-link" href="pokemon.html?id=${pokemon.id}"><div class="pokemon-card">
+        newcard = `<div class="pokemon-card">
+        <a class="pokemon-link" href="pokemon.html?id=${pokemon.id}">
             <h1 class="pokemon-id"> #${pid} </h1>
             <img src="${pimg}" alt="${pname} Image" class="pokemon-img" width="300">
             <h2 class="pokemon-name"> ${pname} </h2>
             <div class="pokemon-type-container" id="${pid}-type-container"> </div>
+            </a>
+            <button type="button" onclick="addToCart(this.id)" id=${pname}> Add to Cart </button>
             </div>`
 
         $("#pokemon-body").append(newcard)
 
         append_types(ptypes, pid)
     }
+}
+
+async function addToCart(id){
+    await $.ajax(
+        {
+            url: `https://ancient-plains-17873.herokuapp.com/addToCart/${UserId}/${id}`,
+            type: "get",
+            success: (message => {
+                console.log(message)
+            })
+        })
 }
 
 async function getPokemon(data) {

@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    width: min(100% - 2rem, 90%);
+    margin-inline: auto;
+    margin-block: 20px;
+    padding: 15px 10px;
+    background-color: rgb(255, 222, 173);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: min(100% - 2rem, 90%);
+    margin-inline: auto;
+    margin-block: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: black;
+    background-color: gainsboro;
+}
+
+span {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h5, h4 {
+    display: inline-block;
+    padding: 10px;
+    margin: 1px;
+}
+
+
+.labels,
+.added-items,
+.miscellanous {
+    border-bottom: 1px solid gray;
+}
