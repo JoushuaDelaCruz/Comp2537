@@ -33,7 +33,7 @@ function getCart() {
         }
     )
 }
-
+    
 function setup() {
     getCart()
 }

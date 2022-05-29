@@ -72,7 +72,7 @@ async function displayCart(cart) {
 
 function createCart() {
     $.ajax(
-        {
+        {   
             url: `https://ancient-plains-17873.herokuapp.com/createNewCart/${userId}`,
             type: "put",
         }
@@ -99,7 +99,7 @@ function getUnpurchasedCart() {
 
 purchaseBtn.addEventListener("click", (event) => {
     $.ajax(
-        {
+        {   
             url: `https://ancient-plains-17873.herokuapp.com/purchaseCart/${event.target.id}/${$(".total").attr("id")}`,
             type: "get",
             success: (message) => {
@@ -148,11 +148,19 @@ function getPuchasedCart(){
     )
 }
 
+function isAdmin(){
+    if (JSON.parse(sessionStorage.getItem("user")).admin){
+        dashboardTag = document.querySelector(".admin-only")
+        dashboardTag.classList.remove("admin-only")
+    }
+}
+
 function setup() {
     greetings()
     getTimeline()
     getUnpurchasedCart()
     getPuchasedCart()
+    isAdmin()
 }
 
 $(document).ready(setup)

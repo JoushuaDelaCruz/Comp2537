@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+
+<body>
+    <header>
+        <nav> 
+            <a href="https://ancient-plains-17873.herokuapp.com/profile.html"> Profile </a>
+            <a href="https://ancient-plains-17873.herokuapp.com/search.html">Search Pokemons </a>
+            <a href="https://ancient-plains-17873.herokuapp.com/game.html"> Memory Game </a>
+        </nav>
+        <button type="button" id="add-user" class="collapsible-data collapsible-data-user">
+            <h4 class="data-label"></h4> <span class="user-email"> Add a User
+            </span>
+        </button>
+        <div class="collapsible-body">
+            <span></span>
+            <div class="data-container">
+                <label for="username">Username</label>
+                <input type="text" class="updating" id="new-user-name">
+            </div>
+            <div class="data-container">
+                <label for="password">Password</label>
+                <input type="text" class="updating" id="new-user-password">
+            </div>
+            <div class="data-container">
+                <label for="admin"> Admin: </label>
+                <span class="checkbox">
+                    <label for="yes">Yes</label>
+                    <input type="checkbox" id="admin-true" name="yes">
+                </span>
+                <span class="checkbox">
+                    <label for="no"> No </label>
+                    <input type="checkbox" id="admin-false" name="no">
+                </span>
+            </div>
+            <span class="user-add"><input type="submit" id="add-btn" value="Add User"></span>
+        </div>
+    </header>
+    <main>
+        <template id="table-template-users">
+            <tr>
+                <td class="user-number"></td>
+                <td class="user-id"></td>
+                <td><input type="text" class="user-name" value="user-admin" disabled></td>
+                <td><input type="text" class="user-password" value="user-password" disabled></td>
+                <td><input type="text" class="user-admin" value="user-admin" disabled></td>
+                <td class="user-update">
+                    <button type="button" class="save-btn"> Save </button>
+                    <button type="button" class="update-btn"> Update </button>
+                </td>
+                <td class="user-delete"><button type="button" class="delete-btn"> Delete </button></td>
+            </tr>
+        </template>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th> Number </th>
+                    <th> Identifier </th>
+                    <th> Username </th>
+                    <th> Password </th>
+                    <th> Admin </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

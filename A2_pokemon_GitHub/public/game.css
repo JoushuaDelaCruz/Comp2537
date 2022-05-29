@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+main {
+    margin-block: 3%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: center;
+    perspective: 1000px;
+    background: linear-gradient(to bottom, rgb(220,20,60), rgb(255,69,0));
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px silver;
+    padding: 30px 20px 20px 20px;
+}
+
+/* ----------------------- */
+/* --- Header Sections --- */
+/* ----------------------- */
+header {
+    width: min(100% - 4rem, 100%);
+    margin-inline: auto;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-rows: 100fr;
+    height: fit-content;
+    column-gap: 10px;
+}
+
+nav {
+    padding: 10px;
+    margin-block: 10px;
+    margin-inline: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: rgb(255,218,185);
+}
+
+nav a {
+    background-color: rgb(139,69,19);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* --------------------- */
+/* -- Setting Section -- */
+/* --------------------- */
+
+.game-settings {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 70fr 30fr;
+    justify-content: center;
+    grid-template-areas: "settings score"
+    "button button";
+    gap: 20px;
+    background-color: rgb(255,228,181);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.setting-column {
+    grid-area: settings;
+}
+
+.setting-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting-container label {
+    font-weight: 600;
+    font-size: large;
+}
+
+.setting-container select {
+    width: 50%;
+    padding: 3px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.setting-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(175,238,238);
+    border: none;
+    font-weight: 600;
+}
+
+.score-column{
+    grid-area: score;
+    text-align: center;
+    background-color: rgb(152,251,152);
+    border-radius: 10px;
+    border: 2px solid silver;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#number-wins{
+    padding: 5px;
+    margin: 2px;
+    height: 60px;
+    font-size: xx-large;
+}
+
+#setting-button{
+    grid-area: button;
+}
+
+/* ------------------ */
+/* --- Event Logs --- */
+/* ------------------ */
+.event-logs {
+    width: 100%;
+    height: 190px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.log-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    padding: 10px;
+    background-color: rgb(240,255,255);
+}
+
+.log-container h3 {
+    font-weight: 100;
+}
+
+
+/* ------------------------------ */
+/* --- Main Width Adjustments --- */
+/* ------------------------------ */
+
+.six-to-four {
+    width: min(100% - 4rem, 80%);
+}
+
+.three-to-two {
+    width: min(100% - 4rem, 60%);;
+}
+
+/* ---------------------------- */
+/* -- Row Number Adjustments -- */
+/* ---------------------------- */
+
+.six-per-row {
+    width: 15%;
+}
+
+.five-per-row {
+    width: 20%;
+}
+
+.four-per-row{
+    width: 25%;
+}
+
+.three-per-row{
+    width: 33.3%;
+}
+
+.two-per-row{
+    width: 50%;
+}
+
+/* -------------------- */
+/* -- Card Container -- */
+/* -------------------- */
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    position: relative;
+    height: 360px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    width: min(300px - 2rem, 220px);
+    height: 350px;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* ------------------- */
+/* -- Images Design -- */
+/* ------------------- */
+
+.front img {
+    background-color: white;
+    width: 200px;
+    border: 5px solid silver;
+}
+
+.front {
+    background-color: rgb(244, 164, 96);
+}
+
+.back-container img {
+    width: 150px;
+}
+
+.back {
+    background-color: midnightblue;
+}
+
+.back-container {
+    height: 330px;
+    background: linear-gradient(to top, rgb(176, 224, 230), rgb(0, 0, 255));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------- */
+/* -- FLIPPING -- */
+/* -------------- */
+
+.front{
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}

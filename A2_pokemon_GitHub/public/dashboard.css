@@ -1,0 +1,219 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: min(100% - 4rem, 95%);
+    margin-inline: auto;
+}
+
+/* --------------- */
+/* -- Table CSS -- */
+/* --------------- */
+
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.content-table thead tr {
+    background-color: rgb(0,139,139);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+
+.content-table tbody tr{
+    border-bottom: 1px solid silver;
+    text-align: center;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid rgb(0,139,139);
+}
+
+/* --------------- */
+/* --- Buttons --- */
+/* --------------- */
+
+button, input[type="submit"] {
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    transition: background 0.2s ease-in;
+}
+
+.update-btn{
+    border: 2px solid forestgreen;
+} 
+
+.update-btn:hover{
+    background-color: green;
+    color: white;
+}
+
+.delete-btn {
+    border: 2px solid red;
+}
+
+.delete-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+.save-btn {
+    border: 2px solid rgb(160,82,45);
+    display: none;
+}
+
+.save-btn:hover {
+    background-color: rgb(160,82,45);
+    color: white;
+}
+
+/* ------------------ */
+/* --- input Tags --- */
+/* ------------------ */
+
+input {
+    text-align: center;
+    padding: 12px 15px;
+    border: none;
+    background-color: inherit;
+}
+
+/* --- When user is updating --- */
+
+.updating {
+    border-bottom: 2px solid rgb(119,136,153);
+    padding: 5px 15px;
+    width: max-content;
+    margin-block: 7px;
+    background-color: rgba(220,220,220, 0.5);
+    text-align: left;
+    width: 100%;
+}
+
+/* --- Collapsible Adding User --- */
+
+/* === Media Query CSS for Collapsible cards === */
+.collapsible-body{
+    display: grid;
+    grid-template-columns: 100fr;
+    grid-auto-rows: 1fr;
+    align-items: baseline;
+    align-content: space-between;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0px 20px;
+    justify-items: stretch;
+    align-items: center;
+}
+
+.collapsible-data {
+    background-color: rgb(139, 69, 19);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.active-collapsible,
+.collapsible-data:hover {
+    background-color: rgb(139, 69, 19);
+}
+
+.collapsible-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgba(240,255,240, 0.8);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: max-height 0.2s ease-out;
+    height: 70vh;
+}
+
+.data-container label {
+    font-weight: 600;
+}
+
+.collapsible-body :nth-child(4){
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.checkbox {
+    margin-inline: 1%;
+}
+
+#add-btn {
+    border: 2px solid orangered;
+}
+
+#add-btn:hover{
+    background-color: orangered;
+    color: white;
+}
+
+/* ---------------------- */
+/* --- Navigation Bar --- */
+/* ---------------------- */
+header {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    padding: 10px;
+    background-color: blanchedalmond;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.user-add {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+}

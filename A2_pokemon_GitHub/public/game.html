@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Pokemon</title>
+
+    <!-- Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./game.css">
+</head>
+
+<body>
+    <nav>
+        <a href="https://ancient-plains-17873.herokuapp.com/profile"> Profile </a>
+        <a href="https://ancient-plains-17873.herokuapp.com/search"> Pokemon Shop </a>
+    </nav>
+    <header>
+        <section class="game-settings">
+            <div class="settings-column">
+                <span class="setting-container">
+                    <label for="num-cards">How Many Cards?</label>
+    
+                    <select name="num-cards" id="num-cards">
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="16">16</option>
+                        <option value="20">20</option>
+                        <option value="24">24</option>
+                        <option value="30">30</option>
+                        <option value="32">32</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+                </span>
+                <span class="setting-container">
+                    <label for="num-cards-per-row">How Many Cards Per Row?</label>
+    
+                    <select name="num-cards-per-row" id="num-cards-per-row">
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                        <option value="six">6</option>
+                    </select>
+                </span>
+            </div>
+            <div class="score-column">
+                <h2> Wins </h2>
+                <h3 id="number-wins"> </h3>
+            </div>
+            <span class="setting-container" id="setting-button">
+                <input type="submit" id="game-btn" value="Start Game">
+            </span>
+        </section>
+        <section class="event-logs">
+
+        </section>
+    </header>
+
+    <template id="card-game-template">
+        <div class="container">
+            <div class="front">
+                <img class="poke-image" alt="pokemon">
+                <h2 class="poke-name"> Bulbasaur </h2>
+            </div>
+            <div class="back">
+                <span class="back-container">
+                    <img src="poke-ball.png" alt="PokeBall" width="50px">
+                </span>
+            </div>
+        </div>
+    </template>
+    <main class="three-to-two">
+    </main>
+
+    <!---------------------------------------------->
+    <!--   Your own JavaScript functions go here  -->
+    <!---------------------------------------------->
+    <script src="game.js"></script>
+</body>
+
+</html>

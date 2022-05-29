@@ -6,7 +6,11 @@ function checkAuthentication(data){
     if (data.success){
         window.sessionStorage.setItem("user", JSON.stringify(data.user))
         createEvent(data.user)
-        window.location.href = "/profile"
+        if (data.user.admin){
+            window.location.href = "/dashboard"
+        } else {
+            window.location.href = "/profile"
+        }
     } else {
         document.getElementById("incorrect").style.display = "block"
     }
