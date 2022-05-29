@@ -99,7 +99,7 @@ a{
 .pokemon-info{
     width: 70%;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 33fr 33fr 33fr;
     margin-top: 100px;
     background-color: aliceblue;
     margin-left: 0px;
@@ -274,3 +274,10 @@ li {
     grid-template-columns: auto auto auto;
     justify-content: center;
 } */
+
+
+@media screen and (max-width:550) {
+    main{
+        grid-template-columns: 100fr;
+    }
+}

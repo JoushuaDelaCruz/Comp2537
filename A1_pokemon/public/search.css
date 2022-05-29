@@ -11,7 +11,7 @@ body{
 
 main {
     display: grid;
-    grid-template-rows: 0px 125px 80%;
+    grid-template-rows: 0px 125px 80fr;
     grid-template-areas: 
     "."
     "header"
@@ -76,14 +76,13 @@ input[type="text"] {
 #pokemon-body{
     grid-area: content;
     display: grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 25fr 25fr 25fr;
     grid-auto-rows: auto;
     grid-template-areas: ".";
     justify-content: space-around;
     align-items: center;
     align-content: space-between;
     row-gap: 50px;
-    
 }
 
 .pokemon-card{
@@ -238,4 +237,10 @@ input[type="text"] {
     background-color: lightcoral;
     border: 3px solid darkblue;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 550px) {
+    #pokemon-body{
+        grid-template-columns: 100fr;
+    }
 }

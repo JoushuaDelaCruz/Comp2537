@@ -11,8 +11,8 @@ body{
 
 main{
     display: grid;
-    grid-template-rows: 200px 700px 300px;
-    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 10fr 50fr 10fr;
+    grid-template-columns: 5fr 90fr 5fr;
     grid-template-areas: 
     ". . ."
     ". body ."
@@ -256,4 +256,10 @@ li {
     background-color: lightcoral;
     border: 3px solid darkblue;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 550) {
+    #main-body{
+        flex-direction: column;
+    }
 }

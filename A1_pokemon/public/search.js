@@ -96,7 +96,7 @@ async function display_pokemon(pokemon, search = false) {
 
 async function getPokemon() {
     for (i = pokemonRegion[0]; i <= pokemonRegion[1]; i++) {
-        await $.get(`https://pokeapi.co/api/v2/pokemon/${i}`, (pokemon) => {
+        await $.get(`http://localhost:5000/findPokemonById`, (pokemon) => {
             display_pokemon(pokemon)
         })
     }
